@@ -28,13 +28,32 @@ This project was built as part of my **ethical hacking & cybersecurity learning 
 - 🔹 **JSON Output** → save results using `-o results.json`  
 - 🔹 **Colored Output** → easy-to-read results with status codes  
 
----
 
 ## ⚡ Installation
 
 ### Clone the repo
 ```bash
 git clone https://github.com/RajKapasi/api-fuzzer.git
-cd api-fuzzer
-  
+cd API-Fuzzer
+```
+1. Create and activate a virtual environment:
+```bash
+python3 -m venv venv
+source venv/bin/activate
+```
+2.Install Dependencies
+  ```bash
+  pip install -r requirements.txt
+  ```
+3.Run the Project
+  ```bash
+  python3 fuzz.py  http://httpbin.org/FUZZ -w text.txt
+```
+
+
+
+
+
+
+    
 
