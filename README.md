@@ -33,6 +33,6 @@ cd api-fuzzer
 ## 👨‍💻 Author
 **Raj Kapasi**  
 - 🌐 GitHub: [rajkapasi](https://github.com/RajKapasi)  
-- 💼 LinkedIn: [Raj Kapasi](https://www.linkedin.com/in/raj-kapasi-5828b3335)  
+- 💼 LnkedIn: [Raj Kapasi](https://www.linkedin.com/in/raj-kapasi-5828b3335)  
 - 📧 Email: rajkapasi2005@gmail.com  
 
