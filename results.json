@@ -1,0 +1,26 @@
+[
+  {
+    "payload": "post",
+    "url": "http://httpbin.org/post",
+    "status": 502,
+    "response": "<html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body>\r\n<center><h1>502 Bad Gateway</h1></cente"
+  },
+  {
+    "payload": "patch",
+    "url": "http://httpbin.org/patch",
+    "status": 405,
+    "response": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\">\n<title>405 Method Not Allowed</title>\n<h1>Me"
+  },
+  {
+    "payload": "put",
+    "url": "http://httpbin.org/put",
+    "status": 405,
+    "response": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\">\n<title>405 Method Not Allowed</title>\n<h1>Me"
+  },
+  {
+    "payload": "delete",
+    "url": "http://httpbin.org/delete",
+    "status": 405,
+    "response": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 3.2 Final//EN\">\n<title>405 Method Not Allowed</title>\n<h1>Me"
+  }
+]
