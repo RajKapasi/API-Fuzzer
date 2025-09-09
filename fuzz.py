@@ -9,15 +9,17 @@ from colorama import Fore, Style, init
 
 
 init(autoreset=True)
-
+# Default threads = 10
 THREADS = 10
 
 def fuzz_worker(queue,args,results):
+    # Use while loop to read word from Queue
     while not queue.empty():
         word = queue.get().strip()
+        # If there is no word then continue
         if not word:
             continue
-
+        # Replace FUZZ word enter in target url with wordlist
         if "FUZZ" in args.target:
             url = args.target.replace("FUZZ",word)
         elif args.data and "FUZZ" in args.data:
@@ -35,6 +37,7 @@ def fuzz_worker(queue,args,results):
         try:
             if args.data:
                 data = args.data.replace("FUZZ",word)
+                # Send http or https requests
                 res = requests.request(args.method, url , headers=headers, timeout=5)
 
             else:
@@ -68,6 +71,7 @@ def fuzz_worker(queue,args,results):
 
 
 def main():
+    #This is a tool description shows how tool works and take arguments on command line interface
     parser=argparse.ArgumentParser(description ="API FUZZER")
     parser.add_argument("target",help="Target URL/FUZZ (FUZZ will replace by wordlist)")
     parser.add_argument("-w", "--wordlist" , help="Wordlist File", required=False)
@@ -79,6 +83,7 @@ def main():
     parser.add_argument("-o", "--output",help="Save result to JSON file", required=False)
     args =parser.parse_args()
 
+#In this stage wordlist is read and put every word it into a Queue
     result=[]
     queue=Queue()
     if args.wordlist:
@@ -92,6 +97,7 @@ def main():
 
     print(Fore.CYAN + f"[+] Starting Fuzzing on {args.target} with {args.threads} threads")
 
+# Start the threads and call the function fuzz_worker
     threads=[]
     for _ in range(args.threads):
         t= threading.Thread(target=fuzz_worker, args=(queue, args, result))
@@ -100,12 +106,12 @@ def main():
         threads.append(t)
 
     queue.join()
-
+# In this stage the result of output is store in Json file given by user
     if args.output:
         with open (args.output, "w") as f:
             json.dump(result, f ,indent=2)
         print(Fore.CYAN + f"[+] Results Save in {args.output}")
 
-
+# main function the program start with this function
 if __name__ == "__main__":
     main()
