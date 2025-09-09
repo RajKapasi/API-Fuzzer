@@ -34,7 +34,7 @@ This project was built as part of my **ethical hacking & cybersecurity learning 
 
 ### Clone the repo
 ```bash
-git clone https://github.com/YOUR_USERNAME/api-fuzzer.git
+git clone https://github.com/RajKapasi/api-fuzzer.git
 cd api-fuzzer
   
 
