@@ -1,3 +1,10 @@
+## 👨‍💻 Author
+**Raj Kapasi**  
+- 🌐 GitHub: [rajkapasi](https://github.com/rajkapasi)  
+- 💼 LnkedIn: [Raj Kapasi](https://www.linkedin.com/in/raj-kapasi-5828b3335)  
+- 📧 Email: rajkapasi2005@gmail.com
+
+
 # 🚀 API Fuzzer in Python
 
 [![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)
@@ -29,10 +36,5 @@ This project was built as part of my **ethical hacking & cybersecurity learning 
 ```bash
 git clone https://github.com/YOUR_USERNAME/api-fuzzer.git
 cd api-fuzzer
-
-## 👨‍💻 Author
-**Raj Kapasi**  
-- 🌐 GitHub: [rajkapasi](https://github.com/RajKapasi)  
-- 💼 LnkedIn: [Raj Kapasi](https://www.linkedin.com/in/raj-kapasi-5828b3335)  
-- 📧 Email: rajkapasi2005@gmail.com  
+  
 
